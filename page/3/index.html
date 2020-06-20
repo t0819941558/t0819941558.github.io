@@ -88,7 +88,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="我的博客">
 <meta property="article:author" content="Meng Yu">
 <meta name="twitter:card" content="summary">
@@ -121,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/page/3/"/>
 
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E5%86%85%E5%AD%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Meng Yu">
@@ -308,7 +308,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/19/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" itemprop="url">三次握手与四次挥手</a></h1>
+                <a class="post-title-link" href="/2020/06/19/%E5%86%85%E5%AD%98/" itemprop="url">内存</a></h1>
         
 
         <div class="post-meta">
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:20:18+08:00">
                 2020-06-19
               </time>
             
@@ -339,8 +339,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/19/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" itemprop="commentCount"></span>
+                <a href="/2020/06/19/%E5%86%85%E5%AD%98/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E5%86%85%E5%AD%98/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -362,7 +362,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  227
+                  61
                 </span>
               
 
@@ -401,8 +401,9 @@
       
         
           
-            <h1 id="三次握手与四次挥手"><a href="#三次握手与四次挥手" class="headerlink" title="三次握手与四次挥手"></a>三次握手与四次挥手</h1><h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><p>1.客户端向服务端发送ack（acknowledge character）确认字符报文。<br>2.服务端接收到报文，给客户端发送报文，告诉客户端已经接收到客户端的报文。<br>3.客户端再次给服务端发送报文，告诉服务端已经接收到服务端的报文。<br>4.tcp连接成立。</p>
-<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><p>1.（中断连接的一方可以是客户端也可以是服务端）客户端给服务端发中断请求。<br>2.客户端进入等待状态，服务端给其发送ack还有没有未传输完的数据。<br>3.等服务端发送完数据，给客户端发结束请求，客户端回应服务端，已经接收到请求。<br>4.服务端接收到客户端的ack请求，则关闭连接。客户端等2min关闭。</p>
+            <h2 id="栈空间"><a href="#栈空间" class="headerlink" title="栈空间"></a>栈空间</h2><p>1.在其中申请一块区域 通过指针(变量名)改变</p>
+<p>2.基本数据类型都是放在栈空间</p>
+<h2 id="堆空间"><a href="#堆空间" class="headerlink" title="堆空间"></a>堆空间</h2><p>1.引用类型,放到堆空间,但是内存地址是放在栈空间</p>
 
           
         
@@ -451,7 +452,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%8E%9F%E7%90%86%E5%8F%8A%E6%B5%81%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E5%BC%80%E8%AF%BE%E5%90%A76.15/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Meng Yu">
@@ -470,7 +471,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/19/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%8E%9F%E7%90%86%E5%8F%8A%E6%B5%81%E7%A8%8B/" itemprop="url">浏览器渲染页面的原理及流程</a></h1>
+                <a class="post-title-link" href="/2020/06/19/%E5%BC%80%E8%AF%BE%E5%90%A76.15/" itemprop="url">开课吧6.15</a></h1>
         
 
         <div class="post-meta">
@@ -482,7 +483,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:20:18+08:00">
                 2020-06-19
               </time>
             
@@ -501,8 +502,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/19/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%8E%9F%E7%90%86%E5%8F%8A%E6%B5%81%E7%A8%8B/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%8E%9F%E7%90%86%E5%8F%8A%E6%B5%81%E7%A8%8B/" itemprop="commentCount"></span>
+                <a href="/2020/06/19/%E5%BC%80%E8%AF%BE%E5%90%A76.15/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E5%BC%80%E8%AF%BE%E5%90%A76.15/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -524,7 +525,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  406
+                  118
                 </span>
               
 
@@ -563,17 +564,12 @@
       
         
           
-            <h1 id="浏览器渲染页面的原理及流程"><a href="#浏览器渲染页面的原理及流程" class="headerlink" title="浏览器渲染页面的原理及流程"></a>浏览器渲染页面的原理及流程</h1><h2 id="浏览器渲染页面的流程"><a href="#浏览器渲染页面的流程" class="headerlink" title="浏览器渲染页面的流程"></a>浏览器渲染页面的流程</h2><p>1.根据html文件构建DOM树和CSSOM树。构建DOM树期间，如果遇到JS，阻塞DOM树及CSSOM树的构建，优先加载JS文件，加载完毕，再继续构建DOM树及CSSOM树。</p>
-<p>2.构建渲染树（Render Tree）。构建渲染树，根据渲染树计算每个可见元素的布局，并输出到绘制流程，将像素渲染到屏幕上。</p>
-<p>（渲染树（Render Tree）由DOM树、CSSOM树合并而成，但并不是必须等DOM树及CSSOM树加载完成后才开始合并构建渲染树。三者的构建并无先后条件，亦非完全独立，而是会有交叉，并行构建。因此会形成一边加载，一边解析，一边渲染的工作现象。）</p>
-<p>3.页面的重绘（repaint）与重排（reflow，也有称回流）。页面渲染完成后，若JS操作了DOM节点，根据JS对DOM操作动作的大小，浏览器对页面进行重绘或是重排。</p>
-<h2 id="浏览器渲染页面的原理"><a href="#浏览器渲染页面的原理" class="headerlink" title="浏览器渲染页面的原理"></a>浏览器渲染页面的原理</h2><p>1、浏览器内核拿到内容后，渲染步骤大致可以分为以下几步：</p>
-<p>2、解析HTML，构建DOM树</p>
-<p>3、解析CSS，生成CSS规则树</p>
-<p>4、合并DOM树和CSS规则，生成render树（DOM树和CSSOM树连接在一起形成render tree .‘渲染数’）</p>
-<p>5、布局render树（Layout/reflow），负责各元素尺寸、位置的计算</p>
-<p>6、绘制render树（paint），绘制页面像素信息</p>
-<p>7、浏览器会将各层的信息发送给GPU，GPU会将各层合成（composite），显示在屏幕上</p>
+            <h1 id="6-15开课吧"><a href="#6-15开课吧" class="headerlink" title="6.15开课吧"></a>6.15开课吧</h1><p>1.window和document的区别</p>
+<p>2.customElements.define(my-custom, myCustom)</p>
+<p>3.arrt.title&amp;&amp;arrt.title.value||’默认’</p>
+<p>4.** prototype属性的引入**</p>
+<p>考虑到这一点，Brendan Eich决定为构造函数设置一个prototype属性。</p>
+<p>这个属性包含一个对象（以下简称”prototype对象”），所有实例对象需要共享的属性和方法，都放在这个对象里面；那些不需要共享的属性和方法，就放在构造函数里面。</p>
 
           
         
@@ -622,7 +618,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E5%AE%9A%E4%BD%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Meng Yu">
@@ -641,7 +637,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/19/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" itemprop="url">防抖和节流</a></h1>
+                <a class="post-title-link" href="/2020/06/19/%E5%AE%9A%E4%BD%8D/" itemprop="url">定位</a></h1>
         
 
         <div class="post-meta">
@@ -653,7 +649,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:20:18+08:00">
                 2020-06-19
               </time>
             
@@ -672,8 +668,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/19/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" itemprop="commentCount"></span>
+                <a href="/2020/06/19/%E5%AE%9A%E4%BD%8D/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E5%AE%9A%E4%BD%8D/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -695,7 +691,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  332
+                  314
                 </span>
               
 
@@ -734,9 +730,20 @@
       
         
           
-            <h1 id="什么是防抖和节流？有什么区别？如何实现"><a href="#什么是防抖和节流？有什么区别？如何实现" class="headerlink" title="什么是防抖和节流？有什么区别？如何实现?"></a>什么是防抖和节流？有什么区别？如何实现?</h1><h2 id="1、防抖-debounce-触发高频事件后-n-秒内函数只会执行一次，如果-n-秒内高频事件再次被触发，则重新计算时间-把上次的timeout-clear了"><a href="#1、防抖-debounce-触发高频事件后-n-秒内函数只会执行一次，如果-n-秒内高频事件再次被触发，则重新计算时间-把上次的timeout-clear了" class="headerlink" title="1、防抖(debounce):触发高频事件后 n 秒内函数只会执行一次，如果 n 秒内高频事件再次被触发，则重新计算时间(把上次的timeout clear了)"></a>1、防抖(debounce):触发高频事件后 n 秒内函数只会执行一次，如果 n 秒内高频事件再次被触发，则重新计算时间(把上次的timeout clear了)</h2><p>_<br>举例：就好像在百度搜索时，每次输入之后都有联想词弹出，这个控制联想词的方法就不可能是输入框内容一改变就触发的，他一定是当你结束输入一段时间之后才会触发。<br>_</p>
-<h2 id="2、节流-thorttle-：高频事件触发，但在-n-秒内只会执行一次，所以节流会稀释函数的执行频率"><a href="#2、节流-thorttle-：高频事件触发，但在-n-秒内只会执行一次，所以节流会稀释函数的执行频率" class="headerlink" title="2、节流(thorttle)：高频事件触发，但在 n 秒内只会执行一次，所以节流会稀释函数的执行频率"></a>2、节流(thorttle)：高频事件触发，但在 n 秒内只会执行一次，所以节流会稀释函数的执行频率</h2><p>举例：预定一个函数只有在大于等于执行周期时才执行，周期内调用不执行。就好像你在淘宝抢购某一件限量热卖商品时，你不断点刷新点购买，可是总有一段时间你点上是没有效果，这里就用到了节流，就是怕点的太快导致系统出现bug。</p>
-<h2 id="3、区别：防抖动是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行（防抖是最后一次把前面的timeclear，节流是如果在500ms内直接return）"><a href="#3、区别：防抖动是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行（防抖是最后一次把前面的timeclear，节流是如果在500ms内直接return）" class="headerlink" title="3、区别：防抖动是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行（防抖是最后一次把前面的timeclear，节流是如果在500ms内直接return）"></a>3、区别：防抖动是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行（防抖是最后一次把前面的timeclear，节流是如果在500ms内直接return）</h2>
+            <h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1><h2 id="标准流-Normal-Flow"><a href="#标准流-Normal-Flow" class="headerlink" title="标准流(Normal Flow)"></a>标准流(Normal Flow)</h2><h3 id="坐标系-从左往右-从上到下"><a href="#坐标系-从左往右-从上到下" class="headerlink" title="坐标系:从左往右,从上到下"></a>坐标系:从左往右,从上到下</h3><p>1.默认情况下都是按照标准流排布</p>
+<h3 id="原理-因为很难实现兄弟元素中间的层叠效果"><a href="#原理-因为很难实现兄弟元素中间的层叠效果" class="headerlink" title="原理:因为很难实现兄弟元素中间的层叠效果"></a>原理:因为很难实现兄弟元素中间的层叠效果</h3><p>1.static: 默认属性</p>
+<p>2.relative: 相对定位,相对于原来的位置.但是原来的位置还是不会改变(类似于opacity:0).不会影响其他元素,没有脱离标准流</p>
+<p><strong>left的百分比是相对于包含块</strong><br><strong>margin左右的百分比也是相对于包含块</strong><br><strong>transform:translate的百分比是相对于自己元素的</strong></p>
+<p>3.absolute: 绝对定位,冒泡寻找根元素,如果不是static则从当前元素的0,0开始.如果都是static则从最外层0,0开始</p>
+<p>4.fixed: 固定定位,直接相对于浏览器定位</p>
+<p><strong>浏览器的展示大小叫视口</strong><br><strong>浏览器的可展示大小叫画布</strong></p>
+<h3 id="脱标"><a href="#脱标" class="headerlink" title="脱标"></a>脱标</h3><p><strong>脱标元素:fixed,float,absolute</strong></p>
+<p>1.可以随便设置宽高</p>
+<p>2.宽高默认由内容决定</p>
+<p>3.不再受标准流的约束</p>
+<p>4.不再给父元素宽高数据</p>
+<p>5.其实脱标是把元素转为block,而不是inline-block.但是因为是脱标不好规定父级元素,所以改为包裹内容.</p>
+
           
         
       
@@ -784,7 +791,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/WebPack/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/IIFE(%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Meng Yu">
@@ -803,7 +810,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/19/WebPack/" itemprop="url">WebPack</a></h1>
+                <a class="post-title-link" href="/2020/06/19/IIFE(%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0)/" itemprop="url">IIFE(立即执行函数)</a></h1>
         
 
         <div class="post-meta">
@@ -815,7 +822,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:20:18+08:00">
                 2020-06-19
               </time>
             
@@ -834,8 +841,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/19/WebPack/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/WebPack/" itemprop="commentCount"></span>
+                <a href="/2020/06/19/IIFE(%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/IIFE(%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0)/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -857,7 +864,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.1k
+                  59
                 </span>
               
 
@@ -873,7 +880,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  1
                 </span>
               
             </div>
@@ -895,28 +902,13 @@
 
       
         
-          <h1 id="1-核心概念"><a href="#1-核心概念" class="headerlink" title="1. 核心概念"></a>1. 核心概念</h1><blockquote>
-<p>本质上，webpack 是一个现代 JavaScript 应用程序的静态<br>模块打包器(module bundler)。当 webpack 处理应用程序<br>时它会递归地构建一个依赖关系图(dependency graph)，其<br>中包含应用程序需要的每个模块，然后将所有这些模块打包<br>成一个或多个 bundle。</p>
-</blockquote>
-<p>&nbsp;</p>
-<h2 id="1-1-入口（entry）"><a href="#1-1-入口（entry）" class="headerlink" title="1.1. 入口（entry）"></a>1.1. 入口（entry）</h2><blockquote>
-<p>入口起点(entry point)指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，webpack 会找出有setting.json哪些模块和库是入口起点（直接和间接）依赖的。</p>
-</blockquote>
-<ol>
-<li>webpack 配置中配置 entry 属性</li>
-<li>默认值为 ./src</li>
-<li>webpack.config.js</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./path/to/my/entry/file.js'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+            <p>###立即执行函数</p>
+<p>1.js不允许在一个函数的声明后面加()执行<br>  function test(){</p>
+<p>  }()<br>2.所以要加东西把函数变成表达式!,()等</p>
+<p>3.IIFE执行完后,立即销毁,所以不需要名字</p>
 
-<br/>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/19/WebPack/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -963,7 +955,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Vue%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/Emmet%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Meng Yu">
@@ -982,7 +974,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/19/Vue%E4%BF%AE%E9%A5%B0%E7%AC%A6/" itemprop="url">Vue修饰符</a></h1>
+                <a class="post-title-link" href="/2020/06/19/Emmet%E8%AF%AD%E6%B3%95/" itemprop="url">Emmet语法</a></h1>
         
 
         <div class="post-meta">
@@ -994,7 +986,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:20:18+08:00">
                 2020-06-19
               </time>
             
@@ -1013,8 +1005,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/19/Vue%E4%BF%AE%E9%A5%B0%E7%AC%A6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/Vue%E4%BF%AE%E9%A5%B0%E7%AC%A6/" itemprop="commentCount"></span>
+                <a href="/2020/06/19/Emmet%E8%AF%AD%E6%B3%95/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/Emmet%E8%AF%AD%E6%B3%95/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1036,7 +1028,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  806
+                  187
                 </span>
               
 
@@ -1052,7 +1044,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  1
                 </span>
               
             </div>
@@ -1074,872 +1066,898 @@
 
       
         
-          <h2 id="Vue修饰符"><a href="#Vue修饰符" class="headerlink" title="Vue修饰符"></a>Vue修饰符</h2><ul>
-<li>.lazy:<br>v-modeil不用多说，输入框改变，这个数据就会改变，lazy这个修饰符会在光标离开input框才会更新数据：</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"text"</span> v-model.lazy=<span class="string">"value"</span>&gt;</span><br></pre></td></tr></table></figure>
+          
+            <h1 id="Emmet语法-用来快速创建html元素"><a href="#Emmet语法-用来快速创建html元素" class="headerlink" title="Emmet语法:用来快速创建html元素"></a>Emmet语法:用来快速创建html元素</h1><p>1.div&gt;span (div内嵌套span)</p>
+<p>2.div+span (div兄弟span)</p>
+<p>3.div&gt;p*5 (div内嵌套5个p标签)</p>
+<p>4.div&gt;p+span^h1+strong</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>5.div&gt;(p&gt;span)+h2来代替^</p>
+<p>6.div#main&gt;div.box+p.p1+span.title^div#footer&gt;div.box2</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"p1"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"footer"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>6.生成内容用{}</p>
+<p>7.#main</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>8.w20+h30+m20-30-40-50+fz20+lh50px+bgc#333+dib(没成功,但可以单个写)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/%E7%BD%91%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Meng Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/19/%E7%BD%91%E9%A1%B5/" itemprop="url">网页</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:20:18+08:00">
+                2020-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/19/%E7%BD%91%E9%A1%B5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/%E7%BD%91%E9%A1%B5/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  206
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###网页的显示过程</p>
+<p>1.通过服务器返回html+js+css&gt;浏览器解析</p>
+<p>2.发送至少一个请求</p>
+<p>3.网页的组成：<br>  html：网页的结构<br>  css: 网页的视觉体验<br>  javascript：网页的交互</p>
+<p>4.浏览器的内核：解析html+css+js<br>  （渲染内核+js引擎）<br>  trident（三叉戟）：ie、uc、360<br>  gecko（壁虎）：firefox<br>  webkit：safari、移动端浏览器控件（webview控件实际上是webkit内核）<br>  webkit-&gt;blink：google chorme</p>
+<p>5.为啥有html和htm：因为早期dos只支持3个字符</p>
+<p>6.HTML全称：hyper text markup language</p>
+<p>7.元素（element）：标签（img）加内容</p>
+<p>8.css画三角形，参考triangle.html 利用border，border的长度都是和div元素做比较</p>
+<p>9.html元素<br>  1.doctype是表示html5的方式<br>  2.html分为head和body 属性为lang<br>  3.head里属性有title,meta,link(引用css和icon)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/18/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Meng Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/18/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" itemprop="url">盒子模型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-18T09:41:15+08:00">
+                2020-06-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/18/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/18/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  29
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><h2 id="内容盒子"><a href="#内容盒子" class="headerlink" title="内容盒子"></a>内容盒子</h2><p>box-sizing = 内容+margin+padding</p>
+<h2 id="边框盒子"><a href="#边框盒子" class="headerlink" title="边框盒子"></a>边框盒子</h2><p>box-sizing 不变,会改变content的高度.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/%E4%BC%AA%E7%B1%BB&%E4%BC%AA%E5%85%83%E7%B4%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Meng Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/14/%E4%BC%AA%E7%B1%BB&%E4%BC%AA%E5%85%83%E7%B4%A0/" itemprop="url">伪类&伪元素</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-14T15:25:47+08:00">
+                2020-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/14/%E4%BC%AA%E7%B1%BB&%E4%BC%AA%E5%85%83%E7%B4%A0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/14/%E4%BC%AA%E7%B1%BB&%E4%BC%AA%E5%85%83%E7%B4%A0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  243
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>1.目标伪类: 主要应用于锚点</p>
+<p>:target(选中的锚点添加状态p:target是交集选择器)</p>
+<p>2.目标状态伪类</p>
+<p>:disabled, :enabled, :checked</p>
+<p>3.动态伪类: 有顺序要求</p>
+<p>a:link(未访问), a:visited(已访问), a:focus(tabindex属性=-1来去掉tab), a:hover(移动放上去), a:active(手指点下去)</p>
+<p>4.结构伪类</p>
 <ul>
-<li>.trim:<br>输入框过滤首尾的空格：</li>
+<li>:nth-child(n), n是正整数(包括0).排行榜可以用-n+3来设置前三名</li>
+<li>:nth-last-child(n), 倒着数</li>
+<li>p:nth-of-type(n) 只找p的n数</li>
+<li>p:nth-last-of-type(n) 倒着</li>
+<li>:only-child (唯一子元素)</li>
+<li>:only-of-type(唯一类型子元素)</li>
+<li>:root(相当于html元素)</li>
+<li>:empty</li>
+<li>:not()</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"text"</span> v-model.trim=<span class="string">"value"</span>&gt;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/19/Vue%E4%BF%AE%E9%A5%B0%E7%AC%A6/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/TCP%20protocol/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Meng Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/19/TCP%20protocol/" itemprop="url">TCP protocol</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
-                2020-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/06/19/TCP%20protocol/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/TCP%20protocol/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.8k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="TCP协议详解"><a href="#TCP协议详解" class="headerlink" title="TCP协议详解"></a>TCP协议详解</h1><h2 id="为什么会有TCP-IP协议"><a href="#为什么会有TCP-IP协议" class="headerlink" title="为什么会有TCP/IP协议"></a>为什么会有TCP/IP协议</h2><blockquote>
-<p>电脑需要定义一些共通的东西来进行交流，TCP/IP就是为此而生。TCP/IP不是一个协议，而是一个协议族的统称。里面包括了IP协议，IMCP协议，TCP协议，以及我们更加熟悉的http、ftp、pop3协议等等。电脑有了这些，就好像学会了外语一样，就可以和其他的计算机终端做自由的交流了。</p>
-</blockquote>
-<h2 id="TCP-IP协议分层"><a href="#TCP-IP协议分层" class="headerlink" title="TCP/IP协议分层"></a>TCP/IP协议分层</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/19/TCP%20protocol/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/scoped%E7%A9%BF%E9%80%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Meng Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/19/scoped%E7%A9%BF%E9%80%8F/" itemprop="url">scoped穿透</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
-                2020-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/06/19/scoped%E7%A9%BF%E9%80%8F/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/scoped%E7%A9%BF%E9%80%8F/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  591
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Vue中的scoped和scoped穿透"><a href="#Vue中的scoped和scoped穿透" class="headerlink" title="Vue中的scoped和scoped穿透"></a>Vue中的scoped和scoped穿透</h1><h2 id="1-什么是scoped"><a href="#1-什么是scoped" class="headerlink" title="1.什么是scoped"></a>1.什么是scoped</h2><blockquote>
-<p>在Vue文件中的style标签上有一个特殊的属性，scoped。当一个style标签拥有scoped属性时候，它的css样式只能用于当前的Vue组件，可以使组件的样式不相互污染。如果一个项目的所有style标签都加上了scoped属性，相当于实现了样式的模块化。</p>
-</blockquote>
-<h2 id="2-scoped的实现原理"><a href="#2-scoped的实现原理" class="headerlink" title="2.scoped的实现原理"></a>2.scoped的实现原理</h2><p>Vue中的scoped属性的效果主要是通过PostCss实现的。以下是转译前的代码:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped lang=<span class="string">"less"</span>&gt;</span><br><span class="line">    .example&#123;</span><br><span class="line">        color:red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div class="example"&gt;scoped测试案例&lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>转译后:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.example[data-v<span class="number">-5558831</span>a] &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"example"</span> data-v<span class="number">-5558831</span>a&gt;scoped测试案例&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/19/scoped%E7%A9%BF%E9%80%8F/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/RenderPage%E5%92%8CRenderBody/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Meng Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/19/RenderPage%E5%92%8CRenderBody/" itemprop="url">RenderPage和RenderBody</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
-                2020-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/06/19/RenderPage%E5%92%8CRenderBody/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/RenderPage%E5%92%8CRenderBody/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/RedisCommand/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Meng Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/19/RedisCommand/" itemprop="url">RedisCommand</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
-                2020-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/06/19/RedisCommand/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/RedisCommand/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  324
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="RedisCommand记录"><a href="#RedisCommand记录" class="headerlink" title="RedisCommand记录"></a>RedisCommand记录</h1><p>1.mset: 同时为多个键设置值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; MSET date &quot;2012.3.30&quot; time &quot;11:00 a.m.&quot; weather &quot;sunny&quot;</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
-
-<p>2.expire: 设置过期时间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; expire name 5 # 5s 后过期</span><br></pre></td></tr></table></figure>
-
-<p>3.setex: set+expire</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; setex name 5 codehole # 5s 后过期，等价于 set+expire</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/19/RedisCommand/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/MVC%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Meng Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/19/MVC%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" itemprop="url">MVC应用程序生命周期</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-19T16:21:23+08:00">
-                2020-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/06/19/MVC%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/MVC%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  664
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="ASP-Net-MVC-应用程序的生命周期"><a href="#ASP-Net-MVC-应用程序的生命周期" class="headerlink" title="ASP.Net MVC 应用程序的生命周期"></a>ASP.Net MVC 应用程序的生命周期</h1><h2 id="一-介绍"><a href="#一-介绍" class="headerlink" title="一.介绍"></a>一.介绍</h2><blockquote>
-<p>定义 ASP.NET 应用程序中的所有应用程序对象共有的方法、属性和事件。此类是用户在 <strong>Global.asax</strong> 文件中所定义的应用程序的基类。</p>
-</blockquote>
-<blockquote>
-<p>MVC有两个生命周期，一个为应用生命周期，二为请求生命周期。</p>
-</blockquote>
-<h2 id="二-应用生命周期"><a href="#二-应用生命周期" class="headerlink" title="二.应用生命周期"></a>二.应用生命周期</h2><p><strong>应用程序生命周期是指在申请过程实际开始运行IIS，直到它停止的时间。这是通过在应用程序中的启动文件的应用程序开始和结束标记事件。</strong></p>
-<p><img src="https://www.baidu.com/img/bd_logo1.png?qua=high" alt="dsa"><br><img src="../%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/2019.10.31/MVC-Cycle/MVC-Application-Cycle.png" alt="Image text"></p>
-<h2 id="三-请求生命周期"><a href="#三-请求生命周期" class="headerlink" title="三.请求生命周期"></a>三.请求生命周期</h2><p>发生每一HTTP请求是由我们的应用处理的时间的事件序列。</p>
-<p>入口点为每个MVC应用始终由ASP.NET收到请求后，计算出应该如何通过URL路由模块来处理。</p>
-<ol>
-<li><p>Routing 路由<br>ASP.NET MVC生命周期中第一个步骤就是路由，路由的过程是根据请求的Url和注册好的路由规则进行匹配，当一旦找到一个与之匹配找路由规则时，ASP.NET MVC路由引擎就把这个请求交给相应的Handler处理。如果没匹配，则返回404错误。<br>注册路由，首先从Global.asax上面注册：</p>
-</li>
-<li><p>Controller 控制器<br>Controller是MVC最核心的组件，他是连接View与Model的桥梁，在Controller内部会有相应的Action方法，可以决定请求返回的视图或数据。</p>
-</li>
-<li><p>Action Excution<br>一旦Controller被创建并初始化以后，里面的Action就开始上场了。这里ASP.NET MVC的框架的一个核心组件ActionInvoker就决定了请求到底是哪一个Action的方法。Action方法是真正接收请求的处理方法。<br>Action接收用户的输入，进行相应的逻辑处理并把要返回的数据Model准备好了之后传给相应的视图。</p>
-</li>
-<li><p>View Engine 视图引擎<br>Action方法的作用是接受输入，然后进行一定的处理并准备响应数据，最后返回一个View Result类型实例。返回的View Result类型这些类型：ViewResult, RedirectToRouteResult, RedirectResult, ContentResult, JsonResult, FileResult, and EmptyResult等等。<br>当我们在Action方法的最后返回一个View Result的时候，ASP.NET MVC框架首先就会选择相应的视图引擎来返回视图。ASP.NET视图引擎都会实现接口IViewEngine。默认ASP.NET MVC框架为我们提供了接口IViewEngine两个实现，视图引擎WebForm和Razor。<br>View视图其实就是一个模板的作用，它是把Action传过来的数据绑定到视图文件中并显示到页面中。</p>
-</li>
+<h2 id="伪元素-区别伪类一般2个冒号-可以看成行内元素"><a href="#伪元素-区别伪类一般2个冒号-可以看成行内元素" class="headerlink" title="伪元素(区别伪类一般2个冒号,可以看成行内元素)"></a>伪元素(区别伪类一般2个冒号,可以看成行内元素)</h2><ol>
+<li>p::first-letter</li>
+<li>p::first-line</li>
+<li>::before(利用content来在元素前添加东西(可以是url()))<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">"123"</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0f0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>::after(利用content来在元素后添加东西(可以是url()))<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">"123"</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0f0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/css%E9%80%89%E6%8B%A9%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Meng Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/14/css%E9%80%89%E6%8B%A9%E5%99%A8/" itemprop="url">css选择器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-14T11:30:56+08:00">
+                2020-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/14/css%E9%80%89%E6%8B%A9%E5%99%A8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/14/css%E9%80%89%E6%8B%A9%E5%99%A8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  92
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><p>1.后代元素选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.直接子元素选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &gt; <span class="selector-tag">span</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.属性选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[title^=<span class="string">"one"</span>]</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.相邻兄弟选择器(后面元素)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span>+<span class="selector-tag">p</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.全部兄弟选择器(后面元素)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span>~<span class="selector-tag">p</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.交集选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.one</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6.并集选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>, <span class="selector-class">.one</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/13/css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Meng Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/13/css/" itemprop="url">css</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-13T16:42:01+08:00">
+                2020-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/13/css/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/13/css/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  368
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS相关"><a href="#CSS相关" class="headerlink" title="CSS相关"></a>CSS相关</h1><p>1.官方文档 w3.org All Status And Drwafts(所有宏观上的修改版本等) Full property table(所有css的属性详解)</p>
+<p>2.mdn中文web(官方文档中文翻译)</p>
+<p>3.查询浏览器css样式兼容性网站   <a href="http://www.caniuse.com" target="_blank" rel="noopener">www.caniuse.com</a></p>
+<p>4.如果把样式表单独抽离为css文件,最好能声明charset  @charset “utf-8”;</p>
+<p>5.用@import的方式引入css样式表,但效率没有link高</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    @<span class="keyword">import</span> url(css样式表)</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>6.尽量不要用标签的属性去控制样式.例如img的width属性</p>
+<p>7.font-family的设置可以设置多个,是为了防止服务器的C/Windows/fonts里没有写的字体</p>
+<p>8.css基线差不多是HTML字母x最底部</p>
+<p>9.text-transform:lowercase</p>
+<p>10.dl(define list),dt(define terms),dd(define description)</p>
+<p>11.tr(table row), th(table head), td(table data)</p>
+<p>12.css的两大特性:继承(inherit),层叠(相同选择器,!important&gt;style&gt;id&gt;类&gt;元素)</p>
+<p>13.改变列表的前面默认块 list-style-type:none</p>
+<p>14.table标签下边框合并border-collapse:collapse(设置边框为1中间会变成2)</p>
+<p>15.margin:auto 浏览器会把剩余的块分配给auto的那一侧</p>
+<p>16.margin-top的百分比是按照父元素的宽度,top是父元素的高度,transform:translateY(-50%)是按照自己的</p>
+<p>17.background-image: url(), url()</p>
+<p>18.css sprite 多个小图片合成到一个大图片(请求多次图片对于服务器压力大)</p>
+<p>19.seo优化 text-indent :-999px;</p>
 
           
         
@@ -1979,7 +1997,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
