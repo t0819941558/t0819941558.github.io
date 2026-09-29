@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="搜索" description="搜索深度思考中的文章与学习笔记。">
+  <section class="page-heading compact">
+    <p class="eyebrow">SEARCH THE NOTES</p>
+    <h1>搜索</h1>
+    <p>从标题、标签和正文中寻找你需要的内容。</p>
+  </section>
+
+  <section class="search-panel" data-pagefind-ignore>
+    <label for="search-input">输入关键词</label>
+    <div class="search-box">
+      <input id="search-input" type="search" autocomplete="off" placeholder="例如：WebGPU、JavaScript、网络……" />
+      <kbd>Enter</kbd>
+    </div>
+    <p id="search-status" class="search-status">输入关键词开始搜索。</p>
+    <div id="search-results" class="search-results"></div>
+  </section>
+</BaseLayout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('#search-input');
+  const results = document.querySelector<HTMLElement>('#search-results');
+  const status = document.querySelector<HTMLElement>('#search-status');
+  let pagefind: { search: (query: string) => Promise<{ results: Array<{ data: () => Promise<any> }> }> } | null = null;
+  let timer = 0;
+
+  function excerptFragment(html: string) {
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    for (const element of template.content.querySelectorAll('*')) {
+      if (element.tagName === 'MARK') {
+        for (const attribute of [...element.attributes]) element.removeAttribute(attribute.name);
+      } else {
+        element.replaceWith(...element.childNodes);
+      }
+    }
+    return template.content;
+  }
+
+  async function runSearch(query: string) {
+    if (!results || !status) return;
+    if (!query.trim()) {
+      results.replaceChildren();
+      status.textContent = '输入关键词开始搜索。';
+      return;
+    }
+    status.textContent = '正在搜索…';
+    try {
+      const modulePath = '/pagefind/pagefind.js';
+      pagefind ??= await import(/* @vite-ignore */ modulePath);
+      const engine = pagefind;
+      if (!engine) throw new Error('Search engine unavailable');
+      const search = await engine.search(query.trim());
+      const items = await Promise.all(search.results.slice(0, 20).map((item) => item.data()));
+      status.textContent = `找到 ${search.results.length} 条结果`;
+      results.replaceChildren(...items.map((item) => {
+        const article = document.createElement('article');
+        article.className = 'search-result';
+        const link = document.createElement('a');
+        const url = typeof item.url === 'string' && item.url.startsWith('/') ? item.url : '/';
+        link.href = url;
+        const title = document.createElement('h2');
+        title.textContent = item.meta.title ?? '未命名文章';
+        const excerpt = document.createElement('p');
+        excerpt.append(excerptFragment(String(item.excerpt ?? '')));
+        link.append(title, excerpt);
+        article.append(link);
+        return article;
+      }));
+    } catch {
+      status.textContent = '搜索索引仅在生产构建后可用。';
+    }
+  }
+
+  input?.addEventListener('input', () => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(() => runSearch(input.value), 180);
+  });
+</script>

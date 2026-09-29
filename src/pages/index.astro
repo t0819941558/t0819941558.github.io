@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const date = new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">DEEP THOUGHT · T08</p>
+      <h1>保持好奇，<br /><em>向问题深处走。</em></h1>
+      <p class="hero-intro">这里记录技术、学习与思考。答案会过时，追问的方法可以留下。</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#latest">阅读最新文章</a>
+        <a class="button quiet" href="/search/">搜索知识</a>
+      </div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true">
+      <span class="orbit-ring ring-one"></span>
+      <span class="orbit-ring ring-two"></span>
+      <span class="orbit-dot"></span>
+      <span class="orbit-label">THINK<br />DEEPER</span>
+    </div>
+  </section>
+
+  <section class="latest-section" id="latest">
+    <header class="section-heading">
+      <div>
+        <p class="eyebrow">LATEST NOTES</p>
+        <h2>最近更新</h2>
+      </div>
+      <a href="/search/">查看与搜索全部文章 →</a>
+    </header>
+
+    {posts.length > 0 ? (
+      <div class="post-list">
+        {posts.map((post, index) => (
+          <article class="post-card">
+            <div class="post-index">{String(index + 1).padStart(2, '0')}</div>
+            <div class="post-card-main">
+              <div class="post-card-meta">
+                <time datetime={post.data.publishedAt.toISOString()}>{date.format(post.data.publishedAt)}</time>
+                {post.data.tags.slice(0, 3).map((tag) => <span>#{tag}</span>)}
+              </div>
+              <h3><a href={`/posts/${post.data.slug}/`}>{post.data.title}</a></h3>
+              <p>{post.data.description}</p>
+            </div>
+            <a class="post-arrow" href={`/posts/${post.data.slug}/`} aria-label={`阅读《${post.data.title}》`}>↗</a>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">第一篇思考正在形成。</div>
+    )}
+  </section>
+
+  <section class="philosophy-grid">
+    <article>
+      <span>01</span>
+      <h2>记录过程</h2>
+      <p>保留推理、试错和改变想法的原因，而不只留下最后的结论。</p>
+    </article>
+    <article>
+      <span>02</span>
+      <h2>连接知识</h2>
+      <p>让零散的学习笔记彼此关联，逐渐形成可以检索和复用的知识网络。</p>
+    </article>
+    <article>
+      <span>03</span>
+      <h2>持续修订</h2>
+      <p>文章由 Git 保存每一次变化，允许今天的理解修正昨天的答案。</p>
+    </article>
+  </section>
+</BaseLayout>

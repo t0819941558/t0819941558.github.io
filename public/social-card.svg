@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><radialGradient id="g"><stop stop-color="#51331a"/><stop offset="1" stop-color="#090b0e"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="920" cy="310" r="180" fill="none" stroke="#f59e42" stroke-width="2" opacity=".4"/>
+  <circle cx="920" cy="310" r="110" fill="none" stroke="#f7c27f" stroke-width="1" opacity=".5"/>
+  <text x="110" y="270" fill="#f7f1e8" font-family="sans-serif" font-size="92" font-weight="700">深度思考</text>
+  <text x="116" y="345" fill="#f59e42" font-family="sans-serif" font-size="28" letter-spacing="8">DEEP THOUGHT · T08</text>
+  <text x="116" y="430" fill="#b6afa6" font-family="sans-serif" font-size="34">技术、学习与未完成的答案</text>
+</svg>

@@ -1,0 +1,88 @@
+---
+import type { MarkdownHeading } from 'astro';
+import BaseLayout from './BaseLayout.astro';
+import ViewCounter from '../components/ViewCounter.astro';
+
+interface Attachment {
+  name: string;
+  file: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  publishedAt: Date;
+  updatedAt?: Date;
+  tags: string[];
+  attachments: Attachment[];
+  headings: MarkdownHeading[];
+}
+
+const { title, description, slug, publishedAt, updatedAt, tags, attachments, headings } = Astro.props;
+const toc = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+const date = new Intl.DateTimeFormat('zh-CN', { dateStyle: 'long' });
+---
+
+<BaseLayout title={title} description={description} article>
+  <article class="article-shell" data-pagefind-body>
+    <header class="article-hero">
+      <a class="eyebrow" href="/">深度思考 / 文章</a>
+      <h1 data-pagefind-meta="title">{title}</h1>
+      <p class="article-description" data-pagefind-meta="description">{description}</p>
+      <div class="article-meta">
+        <time datetime={publishedAt.toISOString()}>{date.format(publishedAt)}</time>
+        {updatedAt && <span>更新于 {date.format(updatedAt)}</span>}
+        <ViewCounter slug={slug} />
+      </div>
+      {tags.length > 0 && (
+        <div class="tag-list" data-pagefind-meta={`tags:${tags.join(',')}`}>
+          {tags.map((tag) => <span>#{tag}</span>)}
+        </div>
+      )}
+    </header>
+
+    <div class="article-grid">
+      <div class="prose">
+        <slot />
+        {attachments.length > 0 && (
+          <section class="attachments" aria-labelledby="attachments-title">
+            <h2 id="attachments-title">附件</h2>
+            <ul>
+              {attachments.map((attachment) => (
+                <li><a href={attachment.file} download>{attachment.name}</a></li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+      {toc.length > 0 && (
+        <aside class="toc" aria-label="文章目录">
+          <strong>目录</strong>
+          <ol>
+            {toc.map((heading) => (
+              <li class={`toc-level-${heading.depth}`}>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      )}
+    </div>
+  </article>
+</BaseLayout>
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
+  const sections = links
+    .map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))))
+    .filter((section): section is HTMLElement => Boolean(section));
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.find((entry) => entry.isIntersecting);
+    if (!visible) return;
+    links.forEach((link) => link.removeAttribute('aria-current'));
+    const current = links.find((link) => decodeURIComponent(link.hash.slice(1)) === visible.target.id);
+    current?.setAttribute('aria-current', 'true');
+  }, { rootMargin: '-15% 0px -70% 0px' });
+  sections.forEach((section) => observer.observe(section));
+</script>

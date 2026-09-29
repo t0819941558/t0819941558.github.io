@@ -1,0 +1,36 @@
+{
+  "name": "deep-thought-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "check": "astro check",
+    "migrate:legacy": "node scripts/migrate-legacy.mjs",
+    "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
+    "worker:test": "vitest run worker/src/index.test.ts",
+    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc"
+  },
+  "dependencies": {
+    "@astrojs/rss": "4.0.19",
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.3.5",
+    "pagefind": "1.5.2",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@cloudflare/workers-types": "5.20260929.1",
+    "@types/node": "26.6.3",
+    "@types/three": "0.186.0",
+    "cheerio": "1.2.0",
+    "turndown": "7.2.4",
+    "turndown-plugin-gfm": "1.0.2",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11",
+    "wrangler": "4.143.0"
+  }
+}

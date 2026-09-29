@@ -1,0 +1,72 @@
+locale: zh_Hans
+site_url: https://t0819941558.github.io
+display_url: https://t0819941558.github.io
+logo_url: /favicon.svg
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: /uploads
+local_backend: true
+
+backend:
+  name: github
+  repo: t0819941558/t0819941558.github.io
+  branch: master
+  base_url: https://deep-thought-api.REPLACE_ME.workers.dev
+  auth_endpoint: /auth
+  squash_merges: true
+
+collections:
+  - name: posts
+    label: 学习文档
+    label_singular: 学习文档
+    folder: src/content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{publishedAt}} · {{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "posts/{{slug}}"
+    sortable_fields: [publishedAt, title, updatedAt]
+    view_filters:
+      - label: 草稿
+        field: draft
+        pattern: true
+      - label: 已发布
+        field: draft
+        pattern: false
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: URL 标识, name: slug, widget: string, hint: "只使用小写字母、数字和连字符，例如 webgpu-notes" }
+      - { label: 摘要, name: description, widget: text }
+      - { label: 发布日期, name: publishedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: 更新日期, name: updatedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: 标签, name: tags, widget: list, default: [] }
+      - { label: 封面, name: cover, widget: image, required: false, choose_url: false }
+      - label: 附件
+        name: attachments
+        widget: list
+        required: false
+        default: []
+        fields:
+          - { label: 显示名称, name: name, widget: string }
+          - { label: 文件, name: file, widget: file, choose_url: false }
+      - { label: 草稿, name: draft, widget: boolean, default: true }
+      - { label: 正文, name: body, widget: markdown }
+
+  - name: archive
+    label: 旧知识归档
+    label_singular: 归档文章
+    folder: src/content/archive
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{publishedAt}} · {{title}}"
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: 原发布日期, name: publishedAt, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: 旧地址, name: legacyPath, widget: string }
+      - { label: 已归档, name: archived, widget: hidden, default: true }
+      - { label: 正文, name: body, widget: markdown }

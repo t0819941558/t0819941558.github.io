@@ -1,0 +1,6 @@
+GITHUB_OAUTH_ID=github-oauth-client-id
+GITHUB_OAUTH_SECRET=github-oauth-client-secret
+OAUTH_STATE_SECRET=replace-with-at-least-32-random-bytes
+VIEW_HASH_SECRET=replace-with-at-least-32-random-bytes
+ALLOWED_GITHUB_LOGIN=t0819941558
+# ALLOWED_GITHUB_ID=12345678

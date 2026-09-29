@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>内容后台 · 深度思考</title>
+    <style>
+      html, body { margin: 0; min-height: 100%; background: #0a0c0f; }
+      #cms-loading { position: fixed; inset: 0; display: grid; place-items: center; color: #f4f0e9; font: 14px system-ui; letter-spacing: .08em; }
+    </style>
+    <script>window.CMS_MANUAL_INIT = true;</script>
+  </head>
+  <body>
+    <div id="cms-loading">正在启动“深度思考”内容后台…</div>
+    <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle('/admin/preview.css');
+      CMS.init();
+      document.querySelector('#cms-loading')?.remove();
+    </script>
+  </body>
+</html>

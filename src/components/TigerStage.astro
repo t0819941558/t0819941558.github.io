@@ -1,0 +1,32 @@
+<div id="tiger-stage" aria-hidden="true">
+  <canvas id="tiger-canvas"></canvas>
+  <div id="tiger-message" role="status"></div>
+</div>
+
+<button id="motion-toggle" class="motion-toggle" type="button" aria-label="暂停背景动画" title="暂停动画">
+  <span aria-hidden="true">Ⅱ</span>
+</button>
+
+<script>
+  const stage = document.querySelector<HTMLElement>('#tiger-stage');
+  const canvas = document.querySelector<HTMLCanvasElement>('#tiger-canvas');
+  const message = document.querySelector<HTMLElement>('#tiger-message');
+  const toggle = document.querySelector<HTMLButtonElement>('#motion-toggle');
+
+  if (stage && canvas && message && toggle) {
+    const launch = async () => {
+      try {
+        const { startTigerScene } = await import('./tiger/TigerScene');
+        await startTigerScene({ stage, canvas, message, toggle });
+      } catch {
+        stage.hidden = true;
+        toggle.hidden = true;
+      }
+    };
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(launch, { timeout: 1400 });
+    } else {
+      globalThis.setTimeout(launch, 400);
+    }
+  }
+</script>

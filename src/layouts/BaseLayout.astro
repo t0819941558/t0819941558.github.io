@@ -1,0 +1,62 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import TigerStage from '../components/TigerStage.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+}
+
+const {
+  title = '深度思考',
+  description = 't08 的技术、学习与思考记录。',
+  image = '/social-card.svg',
+  article = false,
+} = Astro.props;
+const fullTitle = title === '深度思考' ? title : `${title} · 深度思考`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0a0c0f" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="深度思考" href="/rss.xml" />
+    <title>{fullTitle}</title>
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem('theme');
+        const theme = saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="site-shell">
+      <SiteHeader />
+      <main id="main-content">
+        <slot />
+      </main>
+      <SiteFooter />
+    </div>
+    <TigerStage />
+  </body>
+</html>

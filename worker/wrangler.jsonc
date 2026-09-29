@@ -1,0 +1,21 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "deep-thought-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-29",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "SITE_ORIGIN": "https://t0819941558.github.io",
+    "ALLOWED_GITHUB_LOGIN": "t0819941558"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "deep-thought-views",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

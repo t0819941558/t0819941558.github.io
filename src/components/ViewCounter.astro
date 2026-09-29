@@ -1,0 +1,40 @@
+---
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const apiBase = import.meta.env.PUBLIC_VIEWS_API ?? '';
+---
+
+<span class="view-counter" data-slug={slug} data-api={apiBase} hidden>
+  <span aria-hidden="true">◉</span>
+  <span class="view-value">0</span> 次阅读
+</span>
+
+<script>
+  const counter = document.querySelector<HTMLElement>('.view-counter[data-slug]');
+  if (counter) {
+    const api = counter.dataset.api?.replace(/\/$/, '');
+    const slug = counter.dataset.slug;
+    if (api && slug) {
+      const value = counter.querySelector<HTMLElement>('.view-value');
+      const endpoint = `${api}/api/views/${encodeURIComponent(slug)}`;
+      const show = (total: number) => {
+        if (value) value.textContent = new Intl.NumberFormat('zh-CN').format(total);
+        counter.hidden = false;
+      };
+      fetch(endpoint)
+        .then((response) => response.ok ? response.json() : Promise.reject())
+        .then((data: { total: number }) => show(data.total))
+        .catch(() => undefined);
+      window.setTimeout(() => {
+        if (document.visibilityState !== 'visible') return;
+        fetch(endpoint, { method: 'POST', keepalive: true })
+          .then((response) => response.ok ? response.json() : Promise.reject())
+          .then((data: { total: number }) => show(data.total))
+          .catch(() => undefined);
+      }, 3500);
+    }
+  }
+</script>
