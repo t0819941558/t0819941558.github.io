@@ -40,5 +40,5 @@ pnpm worker:deploy
 部署成功后：
 
 1. 把 `public/admin/config.yml` 中 `base_url` 的占位地址替换成真实 Worker 地址。
-2. 在 GitHub 仓库变量中添加 `PUBLIC_VIEWS_API`，值为同一个 Worker 地址。
+2. GitHub Pages 工作流已经通过 `PUBLIC_VIEWS_API` 使用同一个 Worker 地址；更换 Worker 域名时同步修改 `.github/workflows/deploy.yml`。
 3. 可选：查询 GitHub API 的个人资料 ID，并设置 Worker Secret `ALLOWED_GITHUB_ID`，以数字 ID 代替用户名校验。

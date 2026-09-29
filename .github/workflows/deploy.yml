@@ -42,7 +42,7 @@ jobs:
       - name: Build site and search index
         run: pnpm build
         env:
-          PUBLIC_VIEWS_API: ${{ vars.PUBLIC_VIEWS_API }}
+          PUBLIC_VIEWS_API: https://deep-thought-api.tangmengyu1994.workers.dev
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

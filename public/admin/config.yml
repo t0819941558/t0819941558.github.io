@@ -11,7 +11,7 @@ backend:
   name: github
   repo: t0819941558/t0819941558.github.io
   branch: master
-  base_url: https://deep-thought-api.REPLACE_ME.workers.dev
+  base_url: https://deep-thought-api.tangmengyu1994.workers.dev
   auth_endpoint: /auth
   squash_merges: true
 

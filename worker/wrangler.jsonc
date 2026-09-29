@@ -14,7 +14,7 @@
     {
       "binding": "DB",
       "database_name": "deep-thought-views",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "database_id": "9613e603-77bb-45a0-84bb-fdef94bb3571",
       "migrations_dir": "migrations"
     }
   ]
