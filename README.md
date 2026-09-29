@@ -27,6 +27,18 @@ pnpm preview
 - `public/uploads/`：图片和附件。
 - `/admin/`：Decap CMS 内容后台。
 
+## 3D 小老虎
+
+- `assets/tiger/tiger.blend`：可直接在 Blender 中继续编辑的源文件。
+- `public/models/tiger.glb`：网站实际加载的模型。
+- `scripts/generate-tiger.py`：从零生成模型、合并静态网格、渲染预览并导出 GLB。
+
+重新生成：
+
+```powershell
+blender --background --python scripts/generate-tiger.py
+```
+
 ## 发布
 
 推送到 `master` 后，GitHub Actions 会校验并部署到 GitHub Pages。首次上线前需要在仓库的 **Settings → Pages** 中把 Source 设置为 **GitHub Actions**。

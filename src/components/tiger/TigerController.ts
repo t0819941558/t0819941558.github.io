@@ -1,12 +1,12 @@
-import type { Group, Object3D } from 'three/webgpu';
+import type { Object3D } from 'three/webgpu';
 
 export type TigerState = 'idle' | 'look' | 'react' | 'sleep' | 'wake';
 
 interface Rig {
-  root: Group;
-  head: Group;
-  body: Group;
-  tail: Group;
+  root: Object3D;
+  head: Object3D;
+  body: Object3D;
+  tail: Object3D;
   frontLeft: Object3D;
   frontRight: Object3D;
   eyes: Object3D[];
@@ -19,7 +19,13 @@ export class TigerController {
   private targetX = 0;
   private targetY = 0;
 
-  constructor(private readonly rig: Rig) {}
+  private readonly restHeadY: number;
+  private readonly restTailZ: number;
+
+  constructor(private readonly rig: Rig) {
+    this.restHeadY = rig.head.position.y;
+    this.restTailZ = rig.tail.rotation.z;
+  }
 
   setPointer(x: number, y: number, now: number) {
     this.targetX = x;
@@ -44,7 +50,7 @@ export class TigerController {
 
     const breath = Math.sin(now * 0.0022) * 0.025;
     this.rig.body.scale.y = 1 + breath;
-    this.rig.tail.rotation.z = -0.65 + Math.sin(now * 0.003) * 0.28;
+    this.rig.tail.rotation.z = this.restTailZ + Math.sin(now * 0.003) * 0.16;
 
     const desiredHeadX = this.state === 'sleep' ? 0.28 : this.targetY * 0.22;
     const desiredHeadY = this.state === 'sleep' ? 0 : this.targetX * 0.34;
@@ -73,9 +79,9 @@ export class TigerController {
 
     if (this.state === 'sleep') {
       this.rig.root.rotation.z += (-0.09 - this.rig.root.rotation.z) * Math.min(1, delta * 2);
-      this.rig.head.position.y = 0.68 + Math.sin(now * 0.0018) * 0.018;
+      this.rig.head.position.y = this.restHeadY - 0.18 + Math.sin(now * 0.0018) * 0.018;
     } else {
-      this.rig.head.position.y += (0.9 - this.rig.head.position.y) * Math.min(1, delta * 4);
+      this.rig.head.position.y += (this.restHeadY - this.rig.head.position.y) * Math.min(1, delta * 4);
     }
   }
 

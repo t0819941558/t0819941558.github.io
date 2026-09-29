@@ -18,7 +18,8 @@
       try {
         const { startTigerScene } = await import('./tiger/TigerScene');
         await startTigerScene({ stage, canvas, message, toggle });
-      } catch {
+      } catch (error) {
+        console.error('Unable to start the tiger scene.', error);
         stage.hidden = true;
         toggle.hidden = true;
       }

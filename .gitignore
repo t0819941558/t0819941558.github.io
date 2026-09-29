@@ -5,3 +5,4 @@ dist/
 .dev.vars
 worker/.dev.vars
 *.log
+*.blend1

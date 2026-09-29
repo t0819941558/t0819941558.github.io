@@ -69,8 +69,8 @@ flowchart TD
 | 后台界面 | React，仅在 `/admin/` 加载 | Decap CMS 运行环境与自定义预览 |
 | 3D 渲染 | Three.js `WebGPURenderer` | WebGPU 优先、WebGL2 自动回退 |
 | 着色器 | TSL | 背景、轮廓、光照和后处理 |
-| 模型格式 | Three.js 程序化网格；预留 glTF/GLB | 第一版零外部模型依赖，后续可替换为美术模型 |
-| 模型优化 | 按需加载；GLB 阶段使用 Meshopt + KTX2/Basis | 降低首屏阻塞与后续模型体积 |
+| 模型格式 | Blender 5.2 源文件 + glTF/GLB | 可编辑源模型与网站运行模型分离 |
+| 模型优化 | 同材质静态网格合并、按需加载 | 控制 Draw Call、模型体积和首屏阻塞 |
 | 搜索 | Pagefind Extended | 中文静态全文搜索 |
 | 浏览量 | Cloudflare Worker + D1 | 去重计数与查询 |
 | 登录 | GitHub OAuth + Cloudflare Worker | 仅允许仓库所有者访问后台 |
@@ -110,7 +110,7 @@ t0819941558.github.io/
 │  └─ content.config.ts
 ├─ public/
 │  ├─ admin/config.yml
-│  ├─ models/                 # 后续 GLB 美术模型目录
+│  ├─ models/tiger.glb        # Blender 导出的运行模型
 │  └─ uploads/
 │     ├─ images/
 │     └─ attachments/
@@ -219,7 +219,7 @@ Decap 启用 `editorial_workflow`：
 
 ### 9.1 模型与动作
 
-采用卡通低多边形小老虎。首版由 Three.js 基础几何体程序化生成并使用轻量层级骨架，避免外部模型授权与下载；后续可在保持控制器接口不变的情况下替换为骨骼 GLB。第一版动作集：
+采用 Blender 5.2 生成的卡通低多边形小老虎，保留 `.blend` 源文件，并导出带头部、身体、前爪、尾巴与眼睛控制节点的 GLB。网页控制器通过稳定节点名驱动动作。第一版动作集：
 
 - `idle`：呼吸和轻微尾巴摆动
 - `blink`：随机眨眼
@@ -245,9 +245,9 @@ Decap 启用 `editorial_workflow`：
 
 ### 9.3 性能预算
 
-- 首版程序化模型不下载贴图或 GLB；3D 运行时代码在浏览器空闲时异步加载。
-- 后续 GLB 与主要纹理合计目标不超过 3 MB，模型不超过约 50,000 个三角面。
-- 后续主要纹理使用 KTX2，最高 2048×2048。
+- 当前 GLB 不使用外部贴图，模型和 3D 运行时代码均在浏览器空闲时异步加载。
+- GLB 与主要纹理合计目标不超过 3 MB，模型不超过约 50,000 个三角面。
+- 如后续加入纹理，主要纹理使用 KTX2，最高 2048×2048。
 - Draw Call 目标不超过 20。
 - 现代桌面浏览器目标 60 FPS。
 - 文章正文完成首屏渲染后再异步加载 3D。

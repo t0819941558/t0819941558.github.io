@@ -15,7 +15,7 @@ export default defineConfig({
     build: {
       target: 'es2022',
       // Three.js WebGPU/TSL is intentionally isolated in an idle-loaded chunk.
-      chunkSizeWarningLimit: 950,
+      chunkSizeWarningLimit: 1000,
     },
   },
 });
