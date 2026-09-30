@@ -57,6 +57,7 @@ describe('Worker routes', () => {
 
     expect(response.status).toBe(302);
     expect(location.searchParams.get('scope')).toBe('public_repo');
+    expect(location.searchParams.get('redirect_uri')).toBe('https://worker.example/callback');
     expect(response.headers.get('Set-Cookie')).toContain('HttpOnly');
   });
 

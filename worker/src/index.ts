@@ -87,7 +87,7 @@ async function handleAuth(request: Request, env: Env) {
     return new Response('Invalid provider', { status: 400 });
   }
   const state = await createState(env.OAUTH_STATE_SECRET);
-  const callback = `${url.origin}/callback?provider=github`;
+  const callback = `${url.origin}/callback`;
   const authorize = new URL('https://github.com/login/oauth/authorize');
   authorize.searchParams.set('client_id', env.GITHUB_OAUTH_ID);
   authorize.searchParams.set('redirect_uri', callback);
@@ -118,7 +118,7 @@ async function handleCallback(request: Request, env: Env) {
       client_id: env.GITHUB_OAUTH_ID,
       client_secret: env.GITHUB_OAUTH_SECRET,
       code,
-      redirect_uri: `${url.origin}/callback?provider=github`,
+      redirect_uri: `${url.origin}/callback`,
     }),
   });
   const tokenData = await tokenResponse.json<GitHubTokenResponse>();

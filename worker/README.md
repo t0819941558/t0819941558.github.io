@@ -16,7 +16,7 @@
 在 <https://github.com/settings/developers> 创建 OAuth App：
 
 - Homepage URL：Worker 部署后的 `workers.dev` 地址。
-- Authorization callback URL：`https://<worker-address>/callback?provider=github`。
+- Authorization callback URL：`https://<worker-address>/callback`。
 
 设置 Worker Secret：
 
