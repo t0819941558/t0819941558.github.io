@@ -9,7 +9,97 @@ tags:
 attachments: []
 draft: true
 ---
-架构解读
+1. agent-server服务（检查外部依赖）
+
+   1. 判断是否调用限流 通过Rhino
+
+   2. 是否是评测流量
+
+   3. 创建SSE流式通道
+
+   4. 创建 AgentContext（创建 ReAct 上下文和工作记忆、设置技能、多模态、引用消息和重试参数）
+
+2. agent-gateway服务
+
+   1. 基础信息校验
+
+   2. 指定模型拦截
+
+   3. 查询缓存
+
+   4. 风控
+
+   5. 模型限流
+
+   6. AgentContext
+
+\    fillAgentContext（意图识别前）
+
+\    ├── 找到 Agent 配置
+
+\    ├── 加载所有候选 Scene 配置
+
+\    ├── 加载 Router 配置
+
+\    ├── 加载会话轮次
+
+\    ├── 加载外部上下文
+
+\    └── 加载全量历史
+
+\    意图识别  intentHandler（规则识别层、模型识别层、兜底层）IntentResult（干预规则、指定skill、业务规则配置、A2A、DQU）
+
+\    └── 得到 SIMPLE_SEARCH / COMPLEX_SEARCH / A2A 等结果
+
+\    updateAgentContextAfterIntentAnalysis（意图识别后）
+
+\    ├── 简单搜索执行 Fast Router
+
+\    ├── 选择最终 PromptPlatformConfig
+
+\    ├── 加载对应的长期/语义记忆
+
+\    └── 按最终配置裁剪历史消息
+
+\    7. executor：使用executor子类去执行各自的执行器 默认SkillReactAgentExecutor
+
+
+
+3. agent-runtime
+
+\    8. executeReactProcess 执行 React核心流程
+
+\    while循环 通过state去判断是否继续执行 
+
+\    9. executeSingleLoop 
+
+4. agent-core
+
+   ├─ 0  MidStartLoop hook      仅 trajectory-ide 重跑首轮接管，否则秒过
+
+   ├─ 2  PreProcess             轮次打点/场景热切换/A2A兜底(可直接终止本轮)
+
+   ├─ 2.5 SystemPrompt          【空壳，isEnabled=false】
+
+   ├─ 3  Message                MetaMessages 五元组 → 三级裁剪 → ForceSummary/Continuation/预算警告三策略
+
+   ├─ 4  ToolPrepare            skill消息重建 → 策略清空短路 → ALWAYS_LOAD/ON_DEMAND 分层 → 快照同步+监控
+
+   ├─ 5  ModelCall              选模型(降级>插件>快照) → 构造惰性 StreamResponseSpec（不发网络）
+
+   ├─ 6  OutputParse            ★订阅Flux真正请求LLM → 流式推SSE → 流末执行ToolCall → 定currentActionType
+
+   │                              → OUTPUT 则 continueExecution=false（终止信号）
+
+   ├─ 7  ToolDispatch           【空壳】
+
+   ├─ 8  ToolExecute            【空壳】
+
+   ├─ 9  PostProcess            【空壳】
+
+   └─    收尾                   降级决策器+重试熔断器各记一次成功
+
+## 架构解读
 
 一、assistant-ai-agent（引擎层，约 20 万行）
 
